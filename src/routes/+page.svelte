@@ -45,11 +45,17 @@
 
 <style>
 	article {
-		padding: 5rem;
+		padding: 1rem;
 		margin: 0 auto;
 		max-width: 140ch;
 		text-align: left;
 		line-height: 2;
+	}
+
+	@media (min-width: 600px) {
+		article {
+			padding: 5rem;
+		}
 	}
 
 	.days {

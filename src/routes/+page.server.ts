@@ -1,8 +1,8 @@
 import yaml from 'js-yaml';
-import fs from 'fs/promises';
+// import fs from 'fs/promises';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
-import path from 'path';
+// import path from 'path';
 
 type Day = {
 	date: Date;
@@ -13,11 +13,10 @@ type Day = {
 type YAMLRecord = Record<string, Omit<Day, 'date'>>;
 type DayRecord = Record<number, Day>;
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+import daysYML from './data.yml';
 
-export const load = async () => {
-	const ymlFile = await fs.readFile(path.join(__dirname, 'data.yml'), 'utf8');
+export const load = async ({ fetch }) => {
+	const ymlFile = await fetch(daysYML).then((_) => _.text());
 	const ymlRecords = yaml.load(ymlFile) as YAMLRecord[];
 
 	const myDays: DayRecord = ymlRecords.reduce<DayRecord>((acc, val) => {
@@ -42,3 +41,4 @@ export const load = async () => {
 };
 
 export const prerender = true;
+export const csr = false;
