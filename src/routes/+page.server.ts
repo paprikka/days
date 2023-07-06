@@ -40,3 +40,5 @@ export const load = async () => {
 		myDays
 	};
 };
+
+export const prerender = true;
