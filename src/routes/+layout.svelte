@@ -19,6 +19,19 @@
 		color: var(--color-text);
 	}
 
+	:global(body) {
+		padding: 1rem;
+		margin: 0 auto;
+		max-width: 140ch;
+		text-align: left;
+	}
+
+	@media (min-width: 600px) {
+		:global(body) {
+			padding: 5rem;
+		}
+	}
+
 	:global(a) {
 		color: var(--color-link);
 	}

@@ -1,5 +1,6 @@
 <script lang="ts">
-	const startDate = new Date('1987-10-07');
+	// TODO: always start 2 weeks before the first entry
+	const startDate = new Date('1987-06-07');
 	startDate.setHours(0, 0, 0, 0);
 
 	const today = new Date();
@@ -25,6 +26,21 @@
 	$: days = getDaysBetweenDates(startDate, deathDate);
 </script>
 
+<header>
+	<h1>Days</h1>
+	<details hidden>
+		<summary>About</summary>
+		<p>
+			My life in days, inspired by Buster Benson's <a
+				href="https://busterbenson.com/life-in-weeks"
+				target="_blank">Life in Weeks</a
+			>
+			(but appropriately over-engineered). Feel free to
+			<a href="https://githubcom" target="_blank">fork it</a>, but please remember, I'm still
+			working on it.
+		</p>
+	</details>
+</header>
 <article>
 	<div class="days">
 		{#each days as day (day.getTime())}
@@ -44,18 +60,25 @@
 </article>
 
 <style>
-	article {
-		padding: 1rem;
-		margin: 0 auto;
-		max-width: 140ch;
-		text-align: left;
-		line-height: 2;
+	h1 {
+		font-size: 3rem;
+		font-weight: 500;
+		margin-bottom: 0;
 	}
 
-	@media (min-width: 600px) {
-		article {
-			padding: 5rem;
-		}
+	header {
+		padding: 0 0 1rem;
+		margin-bottom: 1rem;
+		font-size: 1.5rem;
+	}
+
+	summary {
+		opacity: 0.5;
+		cursor: pointer;
+	}
+
+	article {
+		line-height: 2;
 	}
 
 	.days {
