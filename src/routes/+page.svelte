@@ -52,6 +52,8 @@
 				>
 					{data.myDays[day.getTime()].name}
 				</time>
+			{:else if day.getMonth() === 4 && day.getDate() === 7}
+				<time class="is-life" datetime={day.toISOString()}>[🎂 {day.getFullYear() - 1988}]</time>
 			{:else}
 				<time class="is-life" datetime={day.toISOString()}>·</time>
 			{/if}
