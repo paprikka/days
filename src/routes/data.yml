@@ -1,69 +1,208 @@
-- '1987-08-07':
+- 1987-08-07:
     name: 'My parents eat scrambled eggs with honey mushrooms'
-    category: 'self'
 
-- '1987-08-09':
-    name: 'Some of that food is used to create the sperm cells that will eventually become me'
-    category: 'self'
+- 1987-08-09:
+    name: 'Some of that food is the sperm cell that will eventually become me'
 
-- '1988-05-07':
+- 1988-05-07:
     name: 'hello_world();'
-    category: 'self'
 
-- '1989-05-10':
+- 1989-05-10:
     name: 'my brother Marcin is born'
-    category: 'family'
 
-- '1991-02-15':
+- 1991-02-15:
     name: 'my brother Jarek is born'
-    category: 'family'
 
-- '1994-09-01':
+- 1992-06-01:
+    name: 'I draw the first letter'
+
+- 1993-07-03:
+    name: 'I draw the first caricature'
+
+- 1994-04-01:
+    name: My great grandma dies
+    desc: |
+        She survived the Austro-Hungarian Empire, two World Wars and the Soviet Union. Picking plums in our orchard till her 90s. 
+
+- 1994-09-01:
     name: 'First day of school'
-    category: 'school'
 
-- '1997-12-24':
-    name: 'My first computer'
-    category: 'school'
+- 1994-09-08:
+    name: I kick a rock on the way back home
+    desc: Ponder the nature of evil for the first time
 
-- '1998-09-07':
-    name: 'My first computer program'
-    category: 'school'
+- 1995-04-16:
+    name: Mom moves abroad
 
-- '1998-10-01':
+- 1997-10-01:
     name: 'My first poem (poorly received)'
-    category: 'school'
 
-- '2015-08-25':
-    name: 'I meet Luna'
-    category: 'family'
+- 1997-12-24:
+    name: 'My first computer'
+    desc: |
+        Optimus, with P60, 8MB of RAM, windows 3.11. 
+        I don't know why, but I still remember the serial number of the hard drive Seagate ST3491A, 427.4 MB
+        
+- 1998-08-11:
+    name: I cook for the first time!
 
-- '2056-04-05':
+- 1998-09-07:
+    name: 'My first computer program'
+
+- 1999-08-11:
+    name: I see a website for the first time!
+    desc: |
+      Typed www.wurst.at in the locked browser window of a kiosk in Amadeus (an Austrian bookstore).
+
+- 2000-09-01:
+    name: 'I start my middle school'
+
+- 2001-03-15:
+    name: '**Lateralus** comes out'
+    desc: |
+        From now on I'll spend half of my vacation days in Saturn (a computer store) listening to music and trying to hack their internet kiosks. Listen [here](https://www.youtube.com/watch?v=Y7JG63IuaWs).
+
+- 2002-11-7:
+    name: 'My teachers accuse me or running a cult'
+
+- 2003-04-11:
+    name: 'Sold my first website!'
+
+- 2003-06-11:
+    name: Photographed the first cemetery
+    desc: Zentralfriedhof in Vienna
+
+- 2004-09-1:
+    name: 'Leaving home, moving to Krakow'
+
+- 2005-07-13:
+    name: I join a Christian pilgrimage, it is strange
+
+- 2006-01-12:
+    name: Totentanz
+    desc: A vampire-themed theatre group based in Krakow.
+
+- 2006-03-24:
+    name: Chief editor of Elysium
+    desc: The biggest, and perhaps the edgiest Vampire-related publication in Poland at the time
+
+- 2007-02-01:
+    name: Started Fotoszopa.pl
+
+- 2007-10-1:
+    name: Started studying Linguistics and Psychology
+
+- 2008-02-11:
+    name: Adopted Maniek
+    desc: The world's ugliest and sweetest cat who couldn't meow.
+
+- 2008-10-01:
+    name: Started Iranian Studies
+
+- 2009-07-01:
+    name: I live in the bushes, again
+
+- 2010-04-24:
+    name: Married to Kasia
+
+- 2011-12-01:
+    name: Moved to Iran for a year
+
+- 2011-12-06:
+    name: Came back from Iran after 5 days
+
+- 2011-12-18:
+    name: Moved to Warsaw
+    desc: and lead my first team, everyone's so much older than me. I buy thick glasses.
+
+- 2013-02-01:
+    name: Move back to Krakow
+
+- 2013-05-10:
+    name: Moved to London
+    desc: to a serious fintech job
+
+- 2013-09-01:
+    name: Contentment
+    desc: less serious startup job
+
+- 2014-02-10:
+    name: Move to Shoreditch
+
+- 2015-08-25:
+    name: Luna
+
+- 2015-10-30:
+    name: ❤️
+    desc: My heart dances to April 14th
+
+- 2016-06-27:
+    name: Divorce party!
+
+- 2016-07-02:
+    name: Luna and I move in together
+
+- 2016-07-10:
+    name: Storienteer
+    desc: Inaugurated with Rainbotron
+
+- 2017-07-17:
+    name: A friend I didn't see as such dies
+
+- 2017-07-19:
+    name: I am depressed (but don't know it yet)
+
+- 2018-01-01:
+    name: Sonnet
+
+- 2019-11-17:
+    name: I realise I'm depressed
+
+- 2019-12-20:
+    name: Ensō
+    desc: https://enso.sonnet.io
+
+- 2020-08-01:
+    name: Bye London, Hello Porto
+
+- 2020-09-11:
+    name: Making fig jam
+
+- 2021-11-02:
+    name: Potato.horse
+
+- 2021-11-11:
+    name: Wavepaths
+
+- 2022-10-16:
+    name: Mango!
+
+- 2022-10-24:
+    name: Learning, making toys
+
+- 2056-04-05:
     name: 'I die (according to my ex-girlfriend)'
-    category: 'family'
 
-- '2056-04-08':
+- 2056-04-08:
     name: "I'm buried (or cremated)"
-    category: 'family'
 
-- '2056-04-13':
+- 2056-04-13:
     name: '🌳'
-    category: 'family'
 
-- '2056-08-13':
+- 2056-08-13:
     name: "It's mushroom season!"
 
-- '2056-10-13':
+- 2056-10-13:
     name: "A honey mushroom grows feeds of what's left from me"
 
-- '2056-10-15':
+- 2056-10-15:
     name: 'A tourist passes by and picks the mushroom'
 
-- '2056-10-17':
+- 2056-10-17:
     name: "They make scrambled eggs with it (It's quite delicious)"
 
-- '2056-10-19':
+- 2056-10-19:
     name: 'They make love'
 
-- '2057-07-07':
+- 2057-07-07:
     name: 'helloWorld();'
