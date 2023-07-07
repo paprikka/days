@@ -1,8 +1,5 @@
 import yaml from 'js-yaml';
-// import fs from 'fs/promises';
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
-// import path from 'path';
+import daysYML from './data.yml';
 
 type Day = {
 	date: Date;
@@ -11,9 +8,7 @@ type Day = {
 };
 
 type YAMLRecord = Record<string, Omit<Day, 'date'>>;
-type DayRecord = Record<number, Day>;
-
-import daysYML from './data.yml';
+export type DayRecord = Record<number, Day>;
 
 export const load = async ({ fetch }) => {
 	const ymlFile = await fetch(daysYML).then((_) => _.text());
@@ -33,12 +28,8 @@ export const load = async ({ fetch }) => {
 		return { ...acc, [currDayID]: currDay };
 	}, {});
 
-	console.log(myDays);
-
-	return {
-		myDays
-	};
+	return { myDays };
 };
 
 export const prerender = true;
-export const csr = false;
+export const csr = process.env.NODE_ENV === 'development';
