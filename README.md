@@ -1,3 +1,3 @@
+To fork the life, please replace the contents of src/data.yml with your own.
 ![Logo](./logo.webp)
 
-Please don't fork my life yet. I'm still working on it.
