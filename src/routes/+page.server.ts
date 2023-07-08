@@ -31,4 +31,4 @@ export const load = async () => {
 };
 
 export const prerender = true;
-export const csr = process.env.NODE_ENV === 'development';
+// export const csr = process.env.NODE_ENV === 'development';
