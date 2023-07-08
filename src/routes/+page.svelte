@@ -177,6 +177,9 @@
 		background-color: rgba(253, 39, 11, 0.3);
 	}
 
+	.is-event:not(.has-description) {
+		pointer-events: none;
+	}
 	.is-event.has-description {
 		text-decoration: underline;
 		cursor: pointer;
