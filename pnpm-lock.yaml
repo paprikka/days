@@ -1,10 +1,9 @@
 lockfileVersion: '6.0'
 
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
-
 devDependencies:
+  '@fontsource-variable/eb-garamond':
+    specifier: ^5.0.5
+    version: 5.0.5
   '@sveltejs/adapter-auto':
     specifier: ^2.0.0
     version: 2.1.0(@sveltejs/kit@1.22.0)
@@ -305,6 +304,10 @@ packages:
   /@eslint/js@8.44.0:
     resolution: {integrity: sha512-Ag+9YM4ocKQx9AarydN0KY2j0ErMHNIocPDrVo8zAE44xLTjEtz81OdR68/cydGtk6m6jDb5Za3r2useMzYmSw==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    dev: true
+
+  /@fontsource-variable/eb-garamond@5.0.5:
+    resolution: {integrity: sha512-Q2pxQytQxq6tr0aghsQvQ7pFuyIQWFd3mLe4c5fxNcrqkczZEZuzjfMMZ7zWmaLzYoCnirwY/3COhWDfzRsnDg==}
     dev: true
 
   /@humanwhocodes/config-array@0.11.10:
@@ -2269,3 +2272,7 @@ packages:
     resolution: {integrity: sha512-9bnSc/HEW2uRy67wc+T8UwauLuPJVn28jb+GtJY16iiKWyvmYJRXVT4UamsAEGQfPohgr2q4Tq0sQbQlxTfi1g==}
     engines: {node: '>=12.20'}
     dev: true
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false

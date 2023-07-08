@@ -1,3 +1,7 @@
+<script>
+	import '@fontsource-variable/eb-garamond';
+</script>
+
 <slot />
 
 <style>
@@ -10,7 +14,7 @@
 		margin: 0;
 		font-size: 16px;
 
-		font-family: 'EB Garamond', serif;
+		font-family: 'EB Garamond Variable', serif;
 		line-height: 1.4;
 
 		--color-bg: #fff4f4;
