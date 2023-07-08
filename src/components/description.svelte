@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { createEventDispatcher } from 'svelte';
 	import type { Day } from '../routes/+page.server';
+	import Md from './md.svelte';
 
 	export let day: Day | undefined;
 
@@ -10,16 +10,16 @@
 		day: 'numeric'
 	};
 
-	$: title = day ? new Intl.DateTimeFormat('en-US', options).format() : '';
+	$: title = day ? new Intl.DateTimeFormat('en-US', options).format(day.date) : '';
 </script>
 
-{#if day}
+{#if day && day.desc}
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 	<div class="overlay" on:click={() => (day = undefined)} role="dialog" aria-modal="true">
 		<aside>
 			<h2>{title}</h2>
-			{day.desc}
+			<Md content={day.desc} />
 
 			<p class="close-info">Click anywhere to close</p>
 		</aside>
@@ -38,7 +38,7 @@
 
 	aside {
 		background-color: var(--color-bg);
-		max-width: 40ch;
+		max-width: 50ch;
 		padding: 1rem;
 		/* border: 2px solid; */
 	}

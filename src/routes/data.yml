@@ -1,34 +1,75 @@
 - 1987-08-07:
-    name: 'My parents eat scrambled eggs with honey mushrooms'
+    name: My parents eat scrambled eggs with honey mushrooms
 
 - 1987-08-09:
-    name: 'Some of that food is the sperm cell that will eventually become me'
+    name: Some of that food
+    desc: |
+        ...becomes the sperm cell and, eventually, me.
+
+        ![Me](/baby.jpg)
+
+        My weight hasn't changed since.
+
 
 - 1988-05-07:
     name: 'hello_world();'
+    desc: |
+        I grew up in a tiny (700 souls) community in the mountains of southern Poland. 
+        
+        The place is called Kamionna, which means the *town of stones* in Polish. Ironically, the most common occupation (besides, unfortunately, alchoholism) is carpentry. Even the light on the altar of our church is made of wood.
+        
+        The region is known as the Island Mountains. It's an apt name, since once they were an archipelago. 
+
+        And you can still see that! In the morning the valleys are covered with myst, like a white fluffy sea, revealing only the tops of the mountains.
+
 
 - 1989-05-10:
     name: 'my brother Marcin is born'
+
+- 1989-06-06:
+    name: I learn to talk
+
+- 1989-11-02:
+    name: I learn to walk
 
 - 1991-02-15:
     name: 'my brother Jarek is born'
 
 - 1992-06-01:
     name: 'I draw the first letter'
+    desc: '## [R](https://sonnet.io/posts/face/)'
+        
+
+- 1993-02-01:
+    name: My first glass of wine
+    desc: |
+        Left accidentally by my parents on the table.
+
+        They found me climing on the furniture. Just below the ceiling.
 
 - 1993-04-11:
     name: I see death for the first time
 
 - 1993-07-03:
     name: 'I draw the first caricature'
+    desc: "[here's how.](https://sonnet.io/posts/face/)"
 
 - 1994-04-01:
     name: My great grandma dies
     desc: |
-        She survived the Austro-Hungarian Empire, two World Wars and the Soviet Union. Picking plums in our orchard till her 90s. 
+        She survived the Austro-Hungarian Empire, two World Wars and the Soviet Union.
+        
+        She was picking plums in our orchard till her 90s. 
+
+        One day she fell asleep.
 
 - 1994-09-01:
     name: 'First day of school'
+
+- 1995-09-01:
+    name: My first friend
+    desc: |
+         His name is Jakub. His surname means in English "Little Darkness".
 
 - 1994-09-08:
     name: I kick a rock on the way back home
@@ -39,10 +80,16 @@
 
 - 1995-04-17:
     name: Diablo I comes out
-    desc: // add a photo
+
+- 1997-09-05:
+    name: 'My first love'
 
 - 1997-10-01:
     name: 'My first poem (poorly received)'
+    desc: |
+        It's a love poem, but it also contains refernces to Microsoft Windows 95. 
+        
+        I found the metaphor of very powerful.
 
 - 1997-12-24:
     name: 'My first computer'
@@ -53,8 +100,22 @@
 - 1998-08-11:
     name: I cook for the first time!
 
+- 1998-08-16:
+    name: My nanny teaches me about heavy metal
+
 - 1998-09-07:
     name: 'My first computer program'
+    desc: |
+        It was a catalog of football players, listing their names, positions, clubs and talents. Written in [qbasic](https://archive.org/details/msdos_qbasic_megapack).
+
+        I made a joke that Ronaldo's main talent was bladder control. Nothing against Ronaldo, the program would break if I felt the variable empty so I had to put something there.
+
+- 1998-10-01:
+    name: I play Diablo for the first time
+    desc: |
+        ![Two boys playing Diablo](/diablo.jpg)
+
+        We drove 60km to the city to buy it in a shady bazaar.
 
 - 1999-08-11:
     name: I see a website for the first time!
@@ -69,7 +130,14 @@
     desc: |
         From now on I'll spend half of my vacation days in Saturn (a computer store) listening to music and trying to hack their internet kiosks. Listen [here](https://www.youtube.com/watch?v=Y7JG63IuaWs).
 
-- 2002-11-7:
+- 2002-02-16:
+    name: My grandma dies
+    desc: |
+        She died in her 60s.
+        
+        She never had any grey hair or wrinkles, despite the fact that the only time I saw her not smiling for a few weeks before she passed away.
+
+- 2002-11-07:
     name: 'My teachers accuse me or running a cult'
 
 - 2003-04-11:
@@ -79,11 +147,29 @@
     name: Photographed the first cemetery
     desc: Zentralfriedhof in Vienna
 
-- 2004-09-1:
+- 2003-07-05:
+    name: First cigarette
+    desc: | 
+        Overall rating: ★☆☆☆☆
+
+        Would not recommend. It's a bit like an instagram account. Feels good for the first 5 minutes. Some people find it really hard to quit.
+
+- 2004-09-01:
     name: 'Leaving home, moving to Krakow'
+
+- 2004-11-01:
+    name: My first RPG game
+    desc: |
+        It was Cyberpunk 2020. I introduced vampires to the game.
+
+        The more experienced nerds in my group told me about Vampire: the Masquerade, which was the world I kept coming back to for the next 5 years.
 
 - 2005-07-13:
     name: I join a Christian pilgrimage, it is strange
+    desc: |
+        Rating: ★★☆☆☆
+
+        Nice people, terrible music, dubious game mechanics.
 
 - 2006-01-12:
     name: Totentanz
@@ -95,6 +181,8 @@
 
 - 2007-02-01:
     name: Started Fotoszopa.pl
+    desc: |
+        My first (legally recognized) company
 
 - 2007-10-1:
     name: Started studying Linguistics and Psychology
@@ -109,7 +197,7 @@
 - 2009-07-01:
     name: I live in the bushes, again
 
-- 2010-04-24:
+- 2011-04-24:
     name: Married to Kasia
 
 - 2011-12-01:
@@ -120,7 +208,7 @@
 
 - 2011-12-18:
     name: Moved to Warsaw (my first team!)
-    desc: and lead my first team, everyone's so much older than me. I buy thick glasses.
+    desc: Everyone is so much older than me. I buy thick glasses to look more serious.
 
 - 2013-02-01:
     name: Move back to Krakow
@@ -148,6 +236,7 @@
 
 - 2016-06-27:
     name: Divorce party!
+    desc: I'm lucky enough to gain a second family but never lose it
 
 - 2016-07-02:
     name: Luna and I move in together
@@ -156,36 +245,52 @@
     name: Storienteer
     desc: Inaugurated with Rainbotron
 
+- 2017-02-17:
+    name: First failed business
+
 - 2017-07-17:
     name: A friend I didn't see as such dies
 
 - 2017-07-19:
-    name: I am depressed (but don't know it yet)
+    name: I'm depressed (but don't know it yet)
 
 - 2018-01-01:
     name: Sonnet
 
 - 2019-11-17:
-    name: I realise I'm depressed
+    name: I'm depressed (I realise that)
 
 - 2019-12-20:
     name: Ensō
     desc: https://enso.sonnet.io
 
+- 2020-07-02:
+    name: Typeform
+
 - 2020-08-01:
-    name: Bye London, Hello Porto
+    name: Bye London, Olá Porto!
+
+- 2020-08-17:
+    name: First Come and Say Hi call
+    desc: |
+        By pure chance I met one of my idols. He can't afford to have a home, or even a bed to sleep every night, and at the same time he works on making the web a place where people can be more close together. 
 
 - 2020-09-11:
-    name: Making fig jam
+    name: Making fig jam, therapy
 
 - 2021-11-02:
     name: Potato.horse
+    desc: |
+        It's [here](https://potato.horse)
+        Every time I attended a useless management meeting, a part of me would die. I would take it out and put it in a tiny JPG file.
 
 - 2021-11-11:
     name: Wavepaths
 
 - 2022-10-16:
     name: Mango!
+    desc: | 
+        Half Portuguese-Podengo, half New-Romantic edgelord. Picked up from a shelter in Porto.
 
 - 2022-10-24:
     name: Learning, making toys
@@ -194,10 +299,14 @@
     name: 🐉 hic sunt dracones 🌊
 
 - 2056-04-05:
-    name: 'I die (according to my ex-girlfriend)'
+    name: 'I die (according to a prophecy)'
+    desc: |
+        The prophet was my ex-partner. I'll err on the side of caution.
+
+        I hope it happens in the morning. 
 
 - 2056-04-08:
-    name: "I'm buried (or cremated)"
+    name: "I'm buried"
 
 - 2056-04-13:
     name: '🌳'
@@ -206,13 +315,14 @@
     name: "It's mushroom season!"
 
 - 2056-10-13:
-    name: "A honey mushroom grows feeds of what's left from me"
+    name: "A honey mushroom grows, feeds of what's left from me"
 
 - 2056-10-15:
-    name: 'A tourist passes by and picks the mushroom'
+    name: '2 tourists pass by and pick the mushroom'
 
 - 2056-10-17:
-    name: "They make scrambled eggs with it (It's quite delicious)"
+    name: "They make scrambled eggs with it"
+    desc: It's quite delicious. Use plenty of butter and don't worry too much about overcooking them (they're quite moist).
 
 - 2056-10-19:
     name: 'They make love'

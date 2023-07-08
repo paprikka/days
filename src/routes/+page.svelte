@@ -2,6 +2,7 @@
 	import { browser } from '$app/environment';
 
 	import Description from '../components/description.svelte';
+	import Md from '../components/md.svelte';
 	import type { Day } from './+page.server.js';
 
 	// TODO: always start 2 weeks before the first entry
@@ -65,7 +66,7 @@
 					class:is-event={data.myDays[day.getTime()]}
 					class:has-description={!!data.myDays[day.getTime()].desc}
 				>
-					{data.myDays[day.getTime()].name}
+					<Md inline content={data.myDays[day.getTime()].name} />
 				</button>
 			{:else if day.getMonth() === 4 && day.getDate() === 7}
 				<time class="is-life" datetime={day.toISOString()}>({day.getFullYear() - 1988})</time>
