@@ -1,7 +1,7 @@
 import yaml from 'js-yaml';
 import daysYML from './data.yml?raw';
 
-type Day = {
+export type Day = {
 	date: Date;
 	name: string;
 	desc?: string;

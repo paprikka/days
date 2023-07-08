@@ -1,4 +1,10 @@
 <script lang="ts">
+	import { browser } from '$app/environment';
+
+	import Description from '../components/description.svelte';
+	import type { Day } from './+page.server.js';
+
+	const random = () => Math.floor(Math.random() * 1000) / 1000;
 	// TODO: always start 2 weeks before the first entry
 	const startDate = new Date('1987-06-07');
 	startDate.setHours(0, 0, 0, 0);
@@ -24,6 +30,14 @@
 	export let data;
 
 	$: days = getDaysBetweenDates(startDate, deathDate);
+
+	let selectedDay: Day;
+
+	$: {
+		if (browser) {
+			document.body.style.overflow = selectedDay ? 'hidden' : '';
+		}
+	}
 </script>
 
 <header>
@@ -45,21 +59,35 @@
 	<div class="days">
 		{#each days as day (day.getTime())}
 			{#if data.myDays[day.getTime()]}
-				<time
-					datetime={day.toISOString()}
-					class:is-today={day.getTime() === today.getTime()}
+				<button
+					on:click={() => {
+						selectedDay = data.myDays[day.getTime()];
+					}}
 					class:is-event={data.myDays[day.getTime()]}
+					class:has-description={!!data.myDays[day.getTime()].desc}
 				>
 					{data.myDays[day.getTime()].name}
-				</time>
+				</button>
 			{:else if day.getMonth() === 4 && day.getDate() === 7}
-				<time class="is-life" datetime={day.toISOString()}>[🎂 {day.getFullYear() - 1988}]</time>
+				<time class="is-life" datetime={day.toISOString()}>({day.getFullYear() - 1988})</time>
 			{:else}
-				<time class="is-life" datetime={day.toISOString()}>·</time>
+				<time
+					style:--x={random() - 0.5}
+					style:--y={random() - 0.5}
+					style:--s={1 - (random() - 0.5) * 0.2}
+					class="is-life"
+					class:is-today={day.getTime() === today.getTime()}
+					class:is-future={day.getTime() > today.getTime()}
+					datetime={day.toISOString()}
+				>
+					·
+				</time>
 			{/if}
 		{/each}
 	</div>
 </article>
+
+<Description bind:day={selectedDay} />
 
 <style>
 	h1 {
@@ -90,24 +118,77 @@
 		list-style: none;
 	}
 
-	.days time {
+	.days time,
+	.days button {
 		display: inline-block;
+	}
+
+	.days button {
+		appearance: none;
+		font-family: inherit;
+		border: none;
+		color: var(--color-text);
+		font-size: 1rem;
+	}
+
+	.is-life {
+		color: var(--color-life);
+		--translate-scale: 3%;
+		font-family: monospace;
+
+		padding: 0 0.2rem;
+
+		translate: calc(var(--x) * var(--translate-scale)) calc(var(--y) * var(--translate-scale));
+		scale: var(--s);
+
+		user-select: none;
 	}
 
 	.is-today {
 		color: var(--color-link);
+		animation: animateHeart 1s infinite;
 	}
 
-	.is-life {
-		font-family: monospace;
-		color: #999;
-		padding: 0 0.2rem;
+	@keyframes animateHeart {
+		0% {
+			scale: calc(3 * 0.8);
+		}
+		5% {
+			scale: calc(3 * 0.9);
+		}
+		10% {
+			scale: calc(3 * 0.8);
+		}
+		15% {
+			scale: calc(3 * 1);
+		}
+		50% {
+			scale: calc(3 * 0.8);
+		}
+		100% {
+			scale: calc(3 * 0.8);
+		}
+	}
+
+	.is-future {
+		color: var(--color-future);
 	}
 
 	.is-event {
 		background-color: rgba(253, 39, 11, 0.1);
-		padding: 0.25em 1ch;
+		padding: 0.25em 1ch 0.4em;
+		position: relative;
+		top: -0.1em;
 		border-radius: 0.25rem;
 		line-height: 1;
+	}
+
+	.is-event:hover {
+		background-color: rgba(253, 39, 11, 0.3);
+	}
+
+	.is-event.has-description {
+		text-decoration: underline;
+		cursor: pointer;
 	}
 </style>
