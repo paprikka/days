@@ -4,7 +4,6 @@
 	import Description from '../components/description.svelte';
 	import type { Day } from './+page.server.js';
 
-	const random = () => Math.floor(Math.random() * 1000) / 1000;
 	// TODO: always start 2 weeks before the first entry
 	const startDate = new Date('1987-06-07');
 	startDate.setHours(0, 0, 0, 0);
@@ -72,9 +71,6 @@
 				<time class="is-life" datetime={day.toISOString()}>({day.getFullYear() - 1988})</time>
 			{:else}
 				<time
-					style:--x={random() - 0.5}
-					style:--y={random() - 0.5}
-					style:--s={1 - (random() - 0.5) * 0.2}
 					class="is-life"
 					class:is-today={day.getTime() === today.getTime()}
 					class:is-future={day.getTime() > today.getTime()}
@@ -133,14 +129,8 @@
 
 	.is-life {
 		color: var(--color-life);
-		--translate-scale: 3%;
 		font-family: monospace;
-
 		padding: 0 0.2rem;
-
-		translate: calc(var(--x) * var(--translate-scale)) calc(var(--y) * var(--translate-scale));
-		scale: var(--s);
-
 		user-select: none;
 	}
 
