@@ -1,5 +1,5 @@
 import yaml from 'js-yaml';
-import daysYML from './data.yml';
+import daysYML from './data.yml?raw';
 
 type Day = {
 	date: Date;
@@ -10,9 +10,8 @@ type Day = {
 type YAMLRecord = Record<string, Omit<Day, 'date'>>;
 export type DayRecord = Record<number, Day>;
 
-export const load = async ({ fetch }) => {
-	const ymlFile = await fetch(daysYML).then((_) => _.text());
-	const ymlRecords = yaml.load(ymlFile) as YAMLRecord[];
+export const load = async () => {
+	const ymlRecords = yaml.load(daysYML) as YAMLRecord[];
 
 	const myDays: DayRecord = ymlRecords.reduce<DayRecord>((acc, val) => {
 		const dateKey = Object.keys(val)[0];

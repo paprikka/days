@@ -34,6 +34,10 @@
 - 1995-04-16:
     name: Mom moves abroad
 
+- 1995-04-17:
+    name: Diablo I comes out
+    desc: // add a photo
+
 - 1997-10-01:
     name: 'My first poem (poorly received)'
 
@@ -112,7 +116,7 @@
     name: Came back from Iran after 5 days
 
 - 2011-12-18:
-    name: Moved to Warsaw
+    name: Moved to Warsaw (my first team!)
     desc: and lead my first team, everyone's so much older than me. I buy thick glasses.
 
 - 2013-02-01:
@@ -122,8 +126,11 @@
     name: Moved to London
     desc: to a serious fintech job
 
+- 2013-06-10:
+    name: I start doodling during boring work meetings
+
 - 2013-09-01:
-    name: Contentment
+    name: CTO at Contentment
     desc: less serious startup job
 
 - 2014-02-10:
@@ -179,6 +186,9 @@
 
 - 2022-10-24:
     name: Learning, making toys
+
+- 2030-10-24:
+    name: 🐉 hic sunt dracones 🌊
 
 - 2056-04-05:
     name: 'I die (according to my ex-girlfriend)'
