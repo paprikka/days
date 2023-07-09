@@ -20,7 +20,7 @@
         
         The region is known as the Island Mountains. It's an apt name, since once they were an archipelago. 
 
-        And you can still see that! In the morning the valleys are covered with myst, like a white fluffy sea, revealing only the tops of the mountains.
+        And you can still see that! In the morning the valleys are covered with mist, like a white fluffy sea, revealing only the tops of the mountains.
 
 
 - 1989-05-10:
@@ -87,9 +87,9 @@
 - 1997-10-01:
     name: 'My first poem (poorly received)'
     desc: |
-        It's a love poem, but it also contains refernces to Microsoft Windows 95. 
+        It's a love poem, but it also contains references to Microsoft Windows 95. 
         
-        I found the metaphor of very powerful.
+        I found the metaphor of window managers powerful.
 
 - 1997-12-24:
     name: 'My first computer'
@@ -99,6 +99,7 @@
         
 - 1998-08-11:
     name: I cook for the first time!
+    desc: Chicken thighs, grossly undercooked
 
 - 1998-08-16:
     name: My nanny teaches me about heavy metal
@@ -204,6 +205,10 @@
 
 - 2011-12-01:
     name: Moved to Iran for a year
+
+- 2011-06-01:
+    name: My parents get divorced
+    desc: It's a happy day. Every divorce is a happy day here.
 
 - 2011-12-06:
     name: Came back from Iran after 5 days
