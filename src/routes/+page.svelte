@@ -57,9 +57,11 @@
 	</details>
 </header>
 <article>
+	<!-- TODO: use keys -->
 	<div class="days">
 		{#each days as day (day.getTime())}
 			{#if data.myDays[day.getTime()]}
+				{day.getTime()} : {day.toISOString()}
 				<button
 					on:click={() => {
 						selectedDay = data.myDays[day.getTime()];
