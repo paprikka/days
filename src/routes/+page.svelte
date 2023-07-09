@@ -4,23 +4,19 @@
 	import Description from '../components/description.svelte';
 	import Md from '../components/md.svelte';
 	import type { Day } from './+page.server.js';
+	import { getDayID } from './get-day-id';
 
 	// TODO: always start 2 weeks before the first entry
 	const startDate = new Date('1987-06-07');
-	startDate.setHours(0, 0, 0, 0);
-
 	const today = new Date();
-	today.setHours(0, 0, 0, 0);
-
 	const deathDate = new Date('2057-07-07');
-	deathDate.setHours(0, 0, 0, 0);
 
-	function getDaysBetweenDates(fromDate: Date, toDate: Date): Date[] {
+	function getDaysBetweenDates(fromDate: Date, toDate: Date): string[] {
 		let dateArray = [];
 		let currentDate = new Date(fromDate);
 
 		while (currentDate <= toDate) {
-			dateArray.push(new Date(currentDate));
+			dateArray.push(getDayID(currentDate));
 			currentDate.setDate(currentDate.getDate() + 1);
 		}
 
@@ -57,26 +53,26 @@
 	</details>
 </header>
 <article>
+	<!-- TODO: use keys -->
 	<div class="days">
-		{#each days as day (day.getTime())}
-			{#if data.myDays[day.getTime()]}
+		{#each days as dayID (dayID)}
+			{#if data.myDays[dayID]}
 				<button
 					on:click={() => {
-						selectedDay = data.myDays[day.getTime()];
+						selectedDay = data.myDays[dayID];
 					}}
-					class:is-event={data.myDays[day.getTime()]}
-					class:has-description={!!data.myDays[day.getTime()].desc}
+					class:is-event={data.myDays[dayID]}
+					class:has-description={!!data.myDays[dayID].desc}
 				>
-					<Md inline content={data.myDays[day.getTime()].name} />
+					<Md inline content={data.myDays[dayID].name} />
 				</button>
-			{:else if day.getMonth() === 4 && day.getDate() === 7}
-				<time class="is-life" datetime={day.toISOString()}>({day.getFullYear() - 1988})</time>
+			{:else if dayID.endsWith('05-07')}
+				<time class="is-life">({parseInt(dayID.split('-')[0]) - 1988})</time>
 			{:else}
 				<time
 					class="is-life"
-					class:is-today={day.getTime() === today.getTime()}
-					class:is-future={day.getTime() > today.getTime()}
-					datetime={day.toISOString()}
+					class:is-today={dayID === getDayID(today)}
+					class:is-future={new Date(dayID).getTime() > today.getTime()}
 				>
 					·
 				</time>

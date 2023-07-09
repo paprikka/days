@@ -1,30 +1,23 @@
 import yaml from 'js-yaml';
 import daysYML from './data.yml?raw';
+import { getDayID } from './get-day-id';
 
 export type Day = {
-	date: Date;
 	name: string;
 	desc?: string;
 };
 
-type YAMLRecord = Record<string, Omit<Day, 'date'>>;
-export type DayRecord = Record<number, Day>;
+export type DayRecord = Record<string, Day>;
 
 export const load = async () => {
-	const ymlRecords = yaml.load(daysYML) as YAMLRecord[];
+	const ymlRecords = yaml.load(daysYML) as Record<string, Day>[];
 
 	const myDays: DayRecord = ymlRecords.reduce<DayRecord>((acc, val) => {
-		const dateKey = Object.keys(val)[0];
-		const date = new Date(dateKey);
-		date.setHours(0, 0, 0, 0);
+		const ymlDate = Object.keys(val)[0];
+		const date = new Date(ymlDate);
+		const dateKey = getDayID(date);
 
-		const currDayID = date.getTime();
-		const currDay: Day = {
-			date,
-			...val[dateKey]
-		};
-
-		return { ...acc, [currDayID]: currDay };
+		return { ...acc, [dateKey]: val[ymlDate] };
 	}, {});
 
 	return { myDays };
