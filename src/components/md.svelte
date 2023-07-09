@@ -2,6 +2,10 @@
 	export let content: string;
 	export let inline = false;
 	import { marked } from 'marked';
+	marked.setOptions({
+		mangle: false,
+		headerIds: false
+	});
 	marked.use({
 		renderer: {
 			link(href, title, text) {
