@@ -3,6 +3,7 @@
 	import Md from './md.svelte';
 
 	export let day: Day | undefined;
+	export let date: Date | undefined;
 
 	const options: Intl.DateTimeFormatOptions = {
 		year: 'numeric',
@@ -10,13 +11,18 @@
 		day: 'numeric'
 	};
 
-	$: title = day ? new Intl.DateTimeFormat('en-US', options).format(day.date) : '';
+	$: title = day ? new Intl.DateTimeFormat('en-US', options).format(date) : '';
 </script>
 
 {#if day && day.desc}
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-	<div class="overlay" on:click={() => (day = undefined)} role="dialog" aria-modal="true">
+	<div
+		class="overlay"
+		on:click={() => ((day = undefined), (date = undefined))}
+		role="dialog"
+		aria-modal="true"
+	>
 		<aside>
 			<h2>{title}</h2>
 			<Md content={day.desc} />

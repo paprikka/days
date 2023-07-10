@@ -28,6 +28,7 @@
 	$: days = getDaysBetweenDates(startDate, deathDate);
 
 	let selectedDay: Day;
+	let selectedDate: Date;
 
 	$: {
 		if (browser) {
@@ -60,6 +61,7 @@
 				<button
 					on:click={() => {
 						selectedDay = data.myDays[dayID];
+						selectedDate = new Date(dayID);
 					}}
 					class:is-event={data.myDays[dayID]}
 					class:has-description={!!data.myDays[dayID].desc}
@@ -81,7 +83,7 @@
 	</div>
 </article>
 
-<Description bind:day={selectedDay} />
+<Description bind:day={selectedDay} bind:date={selectedDate} />
 
 <style>
 	h1 {
