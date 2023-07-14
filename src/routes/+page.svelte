@@ -54,19 +54,15 @@
 
 <header>
 	<h1>Days</h1>
-	<details>
-		<summary>About</summary>
-		<p>
-			My life in days, inspired by Buster Benson's <a
-				href="https://busterbenson.com/life-in-weeks"
-				target="_blank">Life in Weeks</a
-			>
-			(but appropriately over-engineered).
-			<br /> Feel free to
-			<a href="https://github.com/paprikka/days" target="_blank">fork it</a>, but please be gentle,
-			it's still the first iteration.
-		</p>
-	</details>
+	<p>
+		<a href="https://sonnet.io" target="_blank">My</a> life in days, inspired by Buster Benson's
+		<a href="https://busterbenson.com/life-in-weeks" target="_blank">Life in Weeks</a>
+		(but appropriately over-engineered).
+		<br />
+		Feel free to
+		<a href="https://github.com/paprikka/days" target="_blank">fork it</a>, but please be gentle,
+		it's still the first iteration.
+	</p>
 </header>
 <article>
 	<!-- TODO: use keys -->
@@ -112,13 +108,6 @@
 		padding: 0 0 1rem;
 		margin-bottom: 1rem;
 		font-size: 1.5rem;
-	}
-
-	summary {
-		position: relative;
-		z-index: 1;
-		opacity: 0.5;
-		cursor: pointer;
 	}
 
 	article {
