@@ -112,6 +112,28 @@
 		padding: 0;
 		margin: 0;
 		list-style: none;
+		background-color: var(--color-bg-fade);
+		position: relative;
+	}
+
+	.days::before {
+		content: '';
+		height: var(--fade-height);
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: calc(var(--fade-height) * -1);
+		background: linear-gradient(transparent, var(--color-bg-fade));
+	}
+
+	.days::after {
+		content: '';
+		height: var(--fade-height);
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: calc(var(--fade-height) * -1);
+		background: linear-gradient(var(--color-bg-fade), transparent);
 	}
 
 	.days time,
