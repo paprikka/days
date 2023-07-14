@@ -43,10 +43,7 @@
 		const observer = new IntersectionObserver((entries) => {
 			entries.forEach((entry) => {
 				if (!entry.isIntersecting) return;
-
-				if ('umami') {
-					(window.umami as unknown as any).trackEvent('reach:end');
-				}
+				window.umami?.trackEvent('reach:end');
 				observer.disconnect();
 			});
 		});

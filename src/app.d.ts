@@ -2,6 +2,11 @@
 // for information about these interfaces
 
 declare global {
+	interface Window {
+		umami?: {
+			trackEvent: (event: string) => void;
+		};
+	}
 	namespace App {
 		// interface Error {}
 		// interface Locals {}
