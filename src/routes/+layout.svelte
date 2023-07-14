@@ -2,6 +2,15 @@
 	import '@fontsource-variable/eb-garamond';
 </script>
 
+<svelte:head>
+	<script
+		async
+		defer
+		data-website-id="613217d4-e55b-4d53-928a-ef51c65d580a"
+		data-domains="days.sonnet.io"
+		src="https://sonnet-events.vercel.app/umami.js"
+	></script>
+</svelte:head>
 <slot />
 
 <style>

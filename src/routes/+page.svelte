@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
+	import { onMount } from 'svelte';
 
 	import Description from '../components/description.svelte';
 	import Md from '../components/md.svelte';
@@ -35,6 +36,23 @@
 			document.body.style.overflow = selectedDay ? 'hidden' : '';
 		}
 	}
+
+	onMount(() => {
+		const lastEl = document.querySelector('#end-of-content');
+
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				if (!entry.isIntersecting) return;
+
+				if ('umami') {
+					(window.umami as unknown as any).trackEvent('reach:end');
+				}
+				observer.disconnect();
+			});
+		});
+
+		lastEl && observer.observe(lastEl);
+	});
 </script>
 
 <header>
@@ -80,6 +98,7 @@
 				</time>
 			{/if}
 		{/each}
+		<span id="end-of-content" />
 	</div>
 </article>
 
