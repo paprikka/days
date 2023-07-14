@@ -18,14 +18,25 @@
 		line-height: 1.4;
 
 		--color-bg: #fff4f4;
+		--color-bg-fade: #fff4f4dd;
 		--color-text: #333;
 		--color-life: #888;
 		--color-future: #ddd;
 		--color-link: rgb(253, 71, 11);
 
 		--max-content-width: 140ch;
+		--fade-height: 8rem;
 
 		color: var(--color-text);
+	}
+
+	:global(html) {
+		background-color: var(--color-bg);
+		background-image: url('/bg-foot.webp'), url('/bg-lines.webp');
+		background-size: contain;
+		background-repeat: no-repeat, repeat-y;
+		background-position: bottom center, bottom center;
+		padding-block-end: calc(90vh + var(--fade-height));
 	}
 
 	:global(body) {
@@ -33,7 +44,6 @@
 		margin: 0 auto;
 		max-width: var(--max-content-width);
 		text-align: left;
-		background-color: var(--color-bg);
 	}
 
 	@media (min-width: 600px) {
