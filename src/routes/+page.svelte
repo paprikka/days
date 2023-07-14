@@ -9,7 +9,7 @@
 	// TODO: always start 2 weeks before the first entry
 	const startDate = new Date('1987-06-07');
 	const today = new Date();
-	const deathDate = new Date('2057-07-07');
+	const deathDate = new Date('2057-07-08');
 
 	function getDaysBetweenDates(fromDate: Date, toDate: Date): string[] {
 		let dateArray = [];
