@@ -4,7 +4,7 @@
 - 1987-08-09:
     name: Some of that food
     desc: |
-        ...becomes the sperm cell and, eventually, me.
+        ...becomes a sperm cell and, eventually, me.
 
         ![Me](/baby.jpg)
 
@@ -14,13 +14,13 @@
 - 1988-05-07:
     name: 'hello_world();'
     desc: |
-        I grew up in a tiny (700 souls) community in the mountains of southern Poland. 
+        I grew up in a tiny community (700 souls) in the mountains of southern Poland. 
         
-        The place is called Kamionna, which means the *town of stones* in Polish. Ironically, the most common occupation (besides, unfortunately, alchoholism) is carpentry. Even the light on the altar of our church is made of wood.
+        The place is called Kamionna, which means the *town of stones* in Polish. Ironically, the most common occupation (besides, unfortunately, alcoholism) is carpentry. Even the sculpted rays of light on the altar of our church are carved in wood.
         
-        The region is known as the Island Mountains. It's an apt name, since once they were an archipelago. 
+        The region is known as the Island Mountains. It's an apt name, since they used to be an archipelago. 
 
-        And you can still see that! In the morning the valleys are covered with mist, like a white fluffy sea, revealing only the tops of the mountains.
+        And you can still see that! In the morning the valleys are covered with mist, like a fluffy white sea, with only the tops of the mountains showing.
 
 
 - 1989-05-10:
@@ -36,7 +36,7 @@
     name: 'my brother Jarek is born'
 
 - 1992-06-01:
-    name: 'I draw the first letter'
+    name: 'I draw my first letter'
     desc: '## [R](https://sonnet.io/posts/face/)'
         
 
@@ -45,13 +45,13 @@
     desc: |
         Left accidentally by my parents on the table.
 
-        They found me climing on the furniture. Just below the ceiling.
+        They found me climbing on furniture, huddled just under the ceiling.
 
 - 1993-04-11:
     name: I see death for the first time
 
 - 1993-07-03:
-    name: 'I draw the first caricature'
+    name: 'I draw my first caricature'
     desc: "[here's how.](https://sonnet.io/posts/face/)"
 
 - 1994-04-01:
@@ -61,7 +61,7 @@
         
         She was picking plums in our orchard till her 90s. 
 
-        One day she fell asleep.
+        Then one day she fell asleep.
 
 - 1994-09-01:
     name: 'First day of school'
@@ -69,10 +69,10 @@
 - 1995-09-01:
     name: My first friend
     desc: |
-         His name is Jakub. His surname means in English "Little Darkness".
+         His first name is Jakub and his surname in English means "Little Darkness".
 
 - 1994-09-08:
-    name: I kick a rock on the way back home
+    name: I kick a rock on the way home
     desc: Ponder the nature of evil for the first time
 
 - 1995-04-15:
@@ -95,11 +95,11 @@
     name: 'My first computer'
     desc: |
         Optimus, with P60, 8MB of RAM, windows 3.11. 
-        I don't know why, but I still remember the serial number of the hard drive Seagate ST3491A, 427.4 MB
+        I don't know why, but I still remember the serial number of the hard drive: Seagate ST3491A, 427.4 MB
         
 - 1998-08-11:
     name: I cook for the first time!
-    desc: Chicken thighs, grossly undercooked
+    desc: Chicken thighs, grossly undercooked.
 
 - 1998-08-16:
     name: My nanny teaches me about heavy metal
@@ -109,7 +109,7 @@
     desc: |
         It was a catalog of football players, listing their names, positions, clubs and talents. Written in [qbasic](https://archive.org/details/msdos_qbasic_megapack).
 
-        I made a joke that Ronaldo's main talent was bladder control. Nothing against Ronaldo, the program would break if I felt the variable empty so I had to put something there.
+        I made a joke that Ronaldo's main talent was bladder control. Nothing against Ronaldo, but the program would've broken if I left the variable empty so I had to put something there.
 
 - 1998-10-01:
     name: I play Diablo for the first time
@@ -124,7 +124,7 @@
       Typed www.wurst.at in the locked browser window of a kiosk in Amadeus (an Austrian bookstore).
 
 - 2000-09-01:
-    name: 'I start my middle school'
+    name: 'I start middle school'
 
 - 2001-03-15:
     name: '**Lateralus** comes out'
@@ -136,12 +136,14 @@
 - 2002-02-16:
     name: My grandma dies
     desc: |
-        She died in her 60s.
+        She was in her 60s.
         
-        She never had any grey hair or wrinkles, despite the fact that the only time I saw her not smiling for a few weeks before she passed away.
+        She never had any grey hair or wrinkles. The only time I saw her not smiling was during the weeks before she passed away.
+
+        (I was wondering why people say that smiling gives you wrinkles.)
 
 - 2002-11-07:
-    name: 'My teachers accuse me or running a cult'
+    name: 'My teachers accuse me of running a cult'
 
 - 2003-04-11:
     name: 'Sold my first website!'
@@ -203,12 +205,12 @@
 - 2011-04-24:
     name: Married to Kasia
 
-- 2011-12-01:
-    name: Moved to Iran for a year
-
 - 2011-06-01:
     name: My parents get divorced
     desc: It's a happy day. Every divorce is a happy day here.
+
+- 2011-12-01:
+    name: Moved to Iran for a year
 
 - 2011-12-06:
     name: Came back from Iran after 5 days
@@ -224,7 +226,9 @@
     name: Met Peter
     desc: |
         during my first visit to London. 
-        At this time I didn't know that I had met my best friend there.
+        I didn't know it at the time, but he would become one of my best friends.
+
+        Also, much, much later I realised that he was one of the people who taught me Flash a few years back via his [blog](https://web.archive.org/web/20071018024916/http://www.peterjoel.com/blog/)!
 
 - 2013-05-10:
     name: Moved to London
@@ -246,9 +250,13 @@
 - 2015-09-27:
     name: 10000 days
 
-- 2015-10-30:
+- 2015-12-28:
     name: ❤️
-    desc: My heart dances to April 14th
+    desc: My heart dances, [December becomes April](https://www.youtube.com/watch?v=-LgYzva-xq8)
+
+- 2016-04-22:
+    name: Storienteer
+    desc: Inaugurated with [Rainbotron](https://sonnet.io/projects#:~:text=VIEW%20CODE-,Rainbotron,-April%202016)
 
 - 2016-06-27:
     name: Divorce party!
@@ -258,8 +266,11 @@
     name: Luna and I move in together
 
 - 2016-07-10:
-    name: Storienteer
-    desc: Inaugurated with Rainbotron
+    name: Werework
+    desc: | 
+        I was a host and co-founder of Werework—a creative tech speakeasy based in London.
+        
+        We'd meet (almost!) every full moon to drink, eat, talk, and play with digital experiments.
 
 - 2017-02-17:
     name: First failed business
@@ -289,7 +300,9 @@
 - 2020-08-17:
     name: First Come and Say Hi call
     desc: |
-        By pure chance I met one of my idols. He can't afford to have a home, or even a bed to sleep every night, and at the same time he works on making the web a place where people can be more close together. 
+        By pure chance the first person to call me is one of my idols and someone whose work I followed more than a decade earlier.
+        
+        He can't afford to have a home, or even a bed to sleep in every night, and at the same time he works on making the web a place where people can be closer to each other. 
 
 - 2020-09-11:
     name: Making fig jam, therapy
@@ -298,7 +311,7 @@
     name: Potato.horse
     desc: |
         It's [here](https://potato.horse)
-        Every time I attended a useless management meeting, a part of me would die. I would take it out and put it in a tiny JPG file.
+        Every time I attended a useless management meeting, a part of me would die. So I would take it out and put it in a tiny JPG file.
 
 - 2021-11-11:
     name: Wavepaths
@@ -314,12 +327,17 @@
 - 2030-10-24:
     name: 🐉 hic sunt dracones 🌊
 
+- 2045-10-24:
+    name: Life is Elsewhen
+    desc: But will continue below
+
+
 - 2056-04-05:
     name: 'I die (according to a prophecy)'
     desc: |
         The prophet was my ex-partner. I'll err on the side of caution.
 
-        I hope it happens in the morning. 
+        I hope it happens in the morning.
 
 - 2056-04-08:
     name: "I'm buried"
