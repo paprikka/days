@@ -1,8 +1,24 @@
 <script>
 	import '@fontsource-variable/eb-garamond';
+	import SocialMeta from '../components/social-meta.svelte';
 </script>
 
 <svelte:head>
+	<SocialMeta
+		title="Days"
+		url="https://days.sonnet.io/"
+		socialImage={{
+			absoluteUrl: 'https://days.sonnet.io/social.png',
+			height: 506,
+			width: 1012
+		}}
+		description="A life"
+		siteConfig={{
+			name: 'Days',
+			twitterCreator: '@rafalpast',
+			twitterSite: '@rafalpast'
+		}}
+	/>
 	<script
 		async
 		defer
