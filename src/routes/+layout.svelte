@@ -27,7 +27,7 @@
 		line-height: 1.4;
 
 		--color-bg: #fff4f4;
-		--color-bg-fade: #fff4f4dd;
+		--color-bg-fade: #fff4f4ee;
 		--color-text: #333;
 		--color-life: #888;
 		--color-future: #ddd;

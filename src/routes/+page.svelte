@@ -115,6 +115,8 @@
 	}
 
 	summary {
+		position: relative;
+		z-index: 1;
 		opacity: 0.5;
 		cursor: pointer;
 	}
@@ -133,16 +135,19 @@
 	}
 
 	.days::before {
+		z-index: -1;
+		pointer-events: none;
 		content: '';
-		height: var(--fade-height);
+		height: calc(var(--fade-height) * 2);
 		position: absolute;
 		left: 0;
 		right: 0;
-		top: calc(var(--fade-height) * -1);
-		background: linear-gradient(transparent, var(--color-bg-fade));
+		top: calc(var(--fade-height) * -2);
+		background: linear-gradient(transparent, var(--color-bg-fade) var(--fade-height));
 	}
 
 	.days::after {
+		pointer-events: none;
 		content: '';
 		height: var(--fade-height);
 		position: absolute;
