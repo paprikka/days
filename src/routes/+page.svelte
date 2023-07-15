@@ -3,32 +3,27 @@
 	import { onMount } from 'svelte';
 
 	import Description from '../components/description.svelte';
+	import IsLife from '../components/is-life.svelte';
 	import Md from '../components/md.svelte';
-	import type { Day } from './+page.server.js';
-	import { getDayID } from './get-day-id';
+	import { calculateDays } from './calculate-days';
+	import type { RenderableDay } from './types';
+	import IsMarker from '../components/is-marker.svelte';
+	import IsEvent from '../components/is-event.svelte';
 
 	// TODO: always start 2 weeks before the first entry
 	const startDate = new Date('1987-06-07');
 	const today = new Date();
-	const deathDate = new Date('2057-07-08');
-
-	function getDaysBetweenDates(fromDate: Date, toDate: Date): string[] {
-		let dateArray = [];
-		let currentDate = new Date(fromDate);
-
-		while (currentDate <= toDate) {
-			dateArray.push(getDayID(currentDate));
-			currentDate.setDate(currentDate.getDate() + 1);
-		}
-
-		return dateArray;
-	}
+	const endDate = new Date('2057-07-08');
 
 	export let data;
+	const renderableDays: RenderableDay[] = calculateDays({
+		from: startDate,
+		to: endDate,
+		events: data.myDays,
+		today
+	});
 
-	$: days = getDaysBetweenDates(startDate, deathDate);
-
-	let selectedDay: Day;
+	let selectedDay: RenderableDay;
 	let selectedDate: Date;
 
 	$: {
@@ -67,29 +62,18 @@
 <article>
 	<!-- TODO: use keys -->
 	<div class="days">
-		{#each days as dayID (dayID)}
-			{#if data.myDays[dayID]}
-				<button
-					on:click={() => {
-						selectedDay = data.myDays[dayID];
-						selectedDate = new Date(dayID);
+		{#each renderableDays as day (day.start)}
+			{#if day.type === 'event'}
+				<IsEvent
+					event={day}
+					on:select={(event) => {
+						selectedDay = event.detail;
+						selectedDate = new Date(event.detail.start);
 					}}
-					class:is-event={data.myDays[dayID]}
-					class:has-description={!!data.myDays[dayID].desc}
-				>
-					<Md inline content={data.myDays[dayID].name} />
-				</button>
-			{:else if dayID.endsWith('05-07')}
-				<time class="is-life">({parseInt(dayID.split('-')[0]) - 1988})</time>
-			{:else}
-				<time
-					class="is-life"
-					class:is-today={dayID === getDayID(today)}
-					class:is-future={new Date(dayID).getTime() > today.getTime()}
-				>
-					·
-				</time>
-			{/if}
+				/>
+			{:else if day.type === 'marker'}
+				<IsMarker marker={day} />
+			{:else}<IsLife {day} />{/if}
 		{/each}
 		<span id="end-of-content" />
 	</div>
@@ -116,6 +100,7 @@
 
 	.days {
 		display: block;
+		flex-wrap: wrap;
 		padding: 0;
 		margin: 0;
 		list-style: none;
@@ -144,76 +129,5 @@
 		right: 0;
 		bottom: calc(var(--fade-height) * -1);
 		background: linear-gradient(var(--color-bg-fade), transparent);
-	}
-
-	.days time,
-	.days button {
-		display: inline-block;
-	}
-
-	.days button {
-		appearance: none;
-		font-family: inherit;
-		border: none;
-		color: var(--color-text);
-		font-size: 1rem;
-	}
-
-	.is-life {
-		color: var(--color-life);
-		font-family: monospace;
-		padding: 0 0.2rem;
-		user-select: none;
-	}
-
-	.is-today {
-		color: var(--color-link);
-		animation: animateHeart 1s infinite;
-	}
-
-	@keyframes animateHeart {
-		0% {
-			scale: calc(3 * 0.8);
-		}
-		5% {
-			scale: calc(3 * 0.9);
-		}
-		10% {
-			scale: calc(3 * 0.8);
-		}
-		15% {
-			scale: calc(3 * 1);
-		}
-		50% {
-			scale: calc(3 * 0.8);
-		}
-		100% {
-			scale: calc(3 * 0.8);
-		}
-	}
-
-	.is-future {
-		color: var(--color-future);
-	}
-
-	.is-event {
-		background-color: rgba(253, 39, 11, 0.1);
-		padding: 0.25em 1ch 0.4em;
-		position: relative;
-		top: -0.1em;
-		border-radius: 0.25rem;
-		line-height: 1;
-	}
-
-	.is-event:hover {
-		background-color: rgba(253, 39, 11, 0.3);
-	}
-
-	.is-event:not(.has-description) {
-		pointer-events: none;
-	}
-	.is-event.has-description {
-		text-decoration: underline;
-		cursor: pointer;
 	}
 </style>

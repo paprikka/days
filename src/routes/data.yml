@@ -13,6 +13,7 @@
 
 - 1988-05-07:
     name: 'hello_world();'
+    birthday: true
     desc: |
         I grew up in a tiny community (700 souls) in the mountains of southern Poland. 
         
