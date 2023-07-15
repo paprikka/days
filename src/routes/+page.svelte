@@ -6,29 +6,18 @@
 	import Md from '../components/md.svelte';
 	import type { Day } from './+page.server.js';
 	import { getDayID } from './get-day-id';
+	import { calculateDays, type RenderableDay } from './calculate-days';
+	import IsLife from '../components/is-life.svelte';
 
 	// TODO: always start 2 weeks before the first entry
 	const startDate = new Date('1987-06-07');
 	const today = new Date();
 	const deathDate = new Date('2057-07-08');
 
-	function getDaysBetweenDates(fromDate: Date, toDate: Date): string[] {
-		let dateArray = [];
-		let currentDate = new Date(fromDate);
-
-		while (currentDate <= toDate) {
-			dateArray.push(getDayID(currentDate));
-			currentDate.setDate(currentDate.getDate() + 1);
-		}
-
-		return dateArray;
-	}
-
 	export let data;
+	const renderableDays: RenderableDay[] = calculateDays(startDate, deathDate, data.myDays);
 
-	$: days = getDaysBetweenDates(startDate, deathDate);
-
-	let selectedDay: Day;
+	let selectedDay: RenderableDay;
 	let selectedDate: Date;
 
 	$: {
@@ -67,18 +56,22 @@
 <article>
 	<!-- TODO: use keys -->
 	<div class="days">
-		{#each days as dayID (dayID)}
-			{#if data.myDays[dayID]}
+		{#each renderableDays as day (day.start)}
+			{#if day.type === 'event'}
 				<button
 					on:click={() => {
-						selectedDay = data.myDays[dayID];
-						selectedDate = new Date(dayID);
+						selectedDay = day;
+						selectedDate = new Date(day.start);
 					}}
-					class:is-event={data.myDays[dayID]}
-					class:has-description={!!data.myDays[dayID].desc}
+					class="is-event"
+					class:has-description={!!day.desc}><Md inline content={day.name} /></button
 				>
-					<Md inline content={data.myDays[dayID].name} />
-				</button>
+			{:else}<IsLife {day} />{/if}
+		{/each}
+
+		<!-- {#each days as dayID (dayID)}
+			{#if data.myDays[dayID]}
+				
 			{:else if dayID.endsWith('05-07')}
 				<time class="is-life">({parseInt(dayID.split('-')[0]) - 1988})</time>
 			{:else}
@@ -90,7 +83,7 @@
 					·
 				</time>
 			{/if}
-		{/each}
+		{/each} -->
 		<span id="end-of-content" />
 	</div>
 </article>
@@ -116,6 +109,7 @@
 
 	.days {
 		display: block;
+		flex-wrap: wrap;
 		padding: 0;
 		margin: 0;
 		list-style: none;
@@ -146,24 +140,23 @@
 		background: linear-gradient(var(--color-bg-fade), transparent);
 	}
 
-	.days time,
 	.days button {
-		display: inline-block;
-	}
-
-	.days button {
+		display: inline;
 		appearance: none;
 		font-family: inherit;
 		border: none;
 		color: var(--color-text);
 		font-size: 1rem;
+		margin: 0;
 	}
 
 	.is-life {
+		display: inline;
 		color: var(--color-life);
 		font-family: monospace;
-		padding: 0 0.2rem;
+		letter-spacing: 0.5ch;
 		user-select: none;
+		word-break: break-all;
 	}
 
 	.is-today {
