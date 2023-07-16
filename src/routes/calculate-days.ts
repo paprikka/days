@@ -1,39 +1,43 @@
 import type { Day, DayRecord } from './+page.server';
 import { getDayID } from './get-day-id';
-
-export type RenderableEventfulDay = {
-	type: 'event';
-	start: string;
-} & Day;
-
-export type RenderableUneventfulDay = {
-	type: 'uneventful';
-	start: string;
-	duration: number;
-};
-
-export type RenderableDay = RenderableEventfulDay | RenderableUneventfulDay;
-
-const range = (start: number, end: number): number[] =>
-	Array(end - start + 1)
-		.fill(0)
-		.map((_, idx) => start + idx);
+import type { RenderableDay, RenderableEvent, RenderableGap, RenderableToday } from './types';
 
 const ONE_DAY = 24 * 60 * 60 * 1000;
 
-const { round, abs } = Math;
 const getNumberOfDaysBetweenDates = (from: Date, to: Date): number =>
-	round(abs((from.getTime() - to.getTime()) / ONE_DAY));
+	Math.round((to.getTime() - from.getTime()) / ONE_DAY);
 
-export const calculateDays = (from: Date, to: Date, events: DayRecord = {}): RenderableDay[] => {
-	const eventsArraySorted = Object.entries(events)
-		.map(([dateStr, dayMeta]) => ({
-			date: new Date(dateStr),
-			meta: dayMeta
-		}))
-		.sort((a, b) => a.date.getTime() - b.date.getTime());
+export const calculateDays = ({
+	from,
+	to,
+	events = {},
+	today
+}: {
+	from: Date;
+	to: Date;
+	events?: DayRecord;
+	today: Date;
+}): RenderableDay[] => {
+	const renderableToday: RenderableToday = {
+		start: getDayID(today),
+		type: 'today'
+	};
+	const renderableEvents: [Date, RenderableEvent | RenderableToday][] = Object.entries(events).map(
+		([dateStr, dayMeta]) => {
+			const date = new Date(dateStr);
+			const day: RenderableEvent = {
+				...dayMeta,
+				start: getDayID(date),
+				type: 'event'
+			};
+			return [date, day];
+		}
+	);
 
-	const maybeLastEvent = eventsArraySorted[eventsArraySorted.length - 1];
+	renderableEvents.push([today, renderableToday]);
+	renderableEvents.sort((eventA, eventB) => eventA[0].getTime() - eventB[0].getTime());
+
+	const maybeLastEvent = renderableEvents[renderableEvents.length - 1];
 
 	if (typeof maybeLastEvent === 'undefined')
 		return [
@@ -44,32 +48,28 @@ export const calculateDays = (from: Date, to: Date, events: DayRecord = {}): Ren
 			}
 		];
 
-	const shouldAddDaysAfter = getNumberOfDaysBetweenDates(maybeLastEvent.date, to) > 0;
+	const shouldAddDaysAfter = getNumberOfDaysBetweenDates(new Date(maybeLastEvent[0]), to) > 0;
 
-	const dayRecordDates = eventsArraySorted.reduce(
-		(all: { lastDate: Date; days: RenderableDay[] }, curr) => {
-			const daysBefore = getNumberOfDaysBetweenDates(all.lastDate, curr.date);
+	const dayRecordDates = renderableEvents.reduce(
+		(all: { lastDate: Date; days: RenderableDay[] }, [currDate, curr]) => {
+			const daysBefore = getNumberOfDaysBetweenDates(all.lastDate, currDate);
 
-			const event: RenderableEventfulDay = {
-				type: 'event',
-				start: getDayID(curr.date),
-				...curr.meta
-			};
+			const event = curr;
 
 			if (!(daysBefore > 0))
 				return {
-					lastDate: new Date(curr.date.getTime() + ONE_DAY),
+					lastDate: new Date(currDate.getTime() + ONE_DAY),
 					days: [...all.days, event]
 				};
 
-			const uneventful: RenderableUneventfulDay = {
+			const uneventful: RenderableGap = {
 				type: 'uneventful',
 				start: getDayID(all.lastDate),
 				duration: daysBefore
 			};
 
 			return {
-				lastDate: new Date(curr.date.getTime() + ONE_DAY),
+				lastDate: new Date(currDate.getTime() + ONE_DAY),
 				days: [...all.days, uneventful, event]
 			};
 		},
@@ -78,10 +78,10 @@ export const calculateDays = (from: Date, to: Date, events: DayRecord = {}): Ren
 
 	if (!shouldAddDaysAfter) return dayRecordDates.days;
 
-	const daysAfter: RenderableUneventfulDay = {
+	const daysAfter: RenderableGap = {
 		type: 'uneventful',
-		start: getDayID(new Date(maybeLastEvent.date.getTime() + ONE_DAY)),
-		duration: getNumberOfDaysBetweenDates(maybeLastEvent.date, to)
+		start: getDayID(new Date(maybeLastEvent[0].getTime() + ONE_DAY)),
+		duration: getNumberOfDaysBetweenDates(maybeLastEvent[0], to)
 	};
 
 	return [...dayRecordDates.days, daysAfter];
