@@ -8,7 +8,7 @@
 	import IsLife from '../components/is-life.svelte';
 	import IsMarker from '../components/is-marker.svelte';
 	import { calculateDays } from './calculate-days';
-	import type { RenderableDay } from './types';
+	import type { RenderableDay, RenderableEvent } from './types';
 
 	// TODO: always start 2 weeks before the first entry
 	const startDate = new Date('1987-06-07');
@@ -23,7 +23,7 @@
 		today
 	});
 
-	let selectedDay: RenderableDay;
+	let selectedDay: RenderableEvent;
 	let selectedDate: Date;
 
 	$: {

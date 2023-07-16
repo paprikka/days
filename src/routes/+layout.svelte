@@ -1,5 +1,4 @@
 <script>
-	import '@fontsource-variable/eb-garamond';
 	import SocialMeta from '../components/social-meta.svelte';
 </script>
 
@@ -39,7 +38,9 @@
 		margin: 0;
 		font-size: 16px;
 
-		font-family: 'EB Garamond Variable', serif;
+		font-family: Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman',
+			serif;
+
 		line-height: 1.4;
 
 		--color-bg: #fff4f4;

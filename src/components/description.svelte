@@ -1,8 +1,8 @@
 <script lang="ts">
-	import type { Day } from '../routes/+page.server';
+	import type { RenderableEvent } from '../routes/types';
 	import Md from './md.svelte';
 
-	export let day: Day | undefined;
+	export let day: RenderableEvent | undefined;
 	export let date: Date | undefined;
 
 	const options: Intl.DateTimeFormatOptions = {
