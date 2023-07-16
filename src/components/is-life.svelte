@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { RenderableUneventfulDay } from '../routes/calculate-days';
+	import type { RenderableGap } from '../routes/types';
 
-	export let day: RenderableUneventfulDay;
+	export let day: RenderableGap;
 
 	$: text = Array(day.duration).fill('·').join('');
 	$: isFuture = new Date(day.start).getTime() > new Date().getTime();
@@ -19,32 +19,11 @@
 		letter-spacing: 0.5ch;
 		user-select: none;
 		word-break: break-all;
+		padding-inline-start: 0.5ch;
 	}
 
-	.is-today {
-		color: var(--color-link);
-		animation: animateHeart 1s infinite;
-	}
-
-	@keyframes animateHeart {
-		0% {
-			scale: calc(3 * 0.8);
-		}
-		5% {
-			scale: calc(3 * 0.9);
-		}
-		10% {
-			scale: calc(3 * 0.8);
-		}
-		15% {
-			scale: calc(3 * 1);
-		}
-		50% {
-			scale: calc(3 * 0.8);
-		}
-		100% {
-			scale: calc(3 * 0.8);
-		}
+	span:first-child {
+		padding-inline-start: 0;
 	}
 
 	.is-future {
