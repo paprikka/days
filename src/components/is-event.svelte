@@ -12,8 +12,11 @@
 	};
 </script>
 
-<button on:click={handleSelect} class="is-event" class:has-description={!!event.desc}
-	><Md inline content={event.name} /></button
+<button
+	id={event.start}
+	on:click={handleSelect}
+	class="is-event"
+	class:has-description={!!event.desc}><Md inline content={event.name} /></button
 >
 
 <style>
