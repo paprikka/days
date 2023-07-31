@@ -4,11 +4,13 @@
 	export let event: RenderableEvent;
 	import { createEventDispatcher } from 'svelte';
 	import Md from './md.svelte';
+	import { trackEvent } from '../trackEvent';
 	const dispatch = createEventDispatcher<{
 		select: RenderableEvent;
 	}>();
 	const handleSelect = () => {
 		dispatch('select', event);
+		trackEvent(`select:${event.name}`);
 	};
 </script>
 
