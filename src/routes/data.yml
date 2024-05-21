@@ -4,25 +4,23 @@
 - 1987-08-09:
     name: Some of that food
     desc: |
-        ...becomes a sperm cell and, eventually, me.
+      ...becomes a sperm cell and, eventually, me.
 
-        ![Me](/baby.jpg)
+      ![Me](/baby.jpg)
 
-        My weight hasn't changed since.
-
+      My weight hasn't changed since.
 
 - 1988-05-07:
     name: 'hello_world();'
     birthday: true
     desc: |
-        I grew up in a tiny community (700 souls) in the mountains of southern Poland. 
-        
-        The place is called Kamionna, which means the *town of stones* in Polish. Ironically, the most common occupation (besides, unfortunately, alcoholism) is carpentry. Even the sculpted rays of light on the altar of our church are carved in wood.
-        
-        The region is known as the Island Mountains. It's an apt name, since they used to be an archipelago. 
+      I grew up in a tiny community (700 souls) in the mountains of southern Poland. 
 
-        And you can still see that! In the morning the valleys are covered with mist, like a fluffy white sea, with only the tops of the mountains showing.
+      The place is called Kamionna, which means the *town of stones* in Polish. Ironically, the most common occupation (besides, unfortunately, alcoholism) is carpentry. Even the sculpted rays of light on the altar of our church are carved in wood.
 
+      The region is known as the Island Mountains. It's an apt name, since they used to be an archipelago. 
+
+      And you can still see that! In the morning the valleys are covered with mist, like a fluffy white sea, with only the tops of the mountains showing.
 
 - 1989-05-10:
     name: 'my brother Marcin is born'
@@ -39,14 +37,13 @@
 - 1992-06-01:
     name: 'I draw my first letter'
     desc: '## [R](https://sonnet.io/posts/face/)'
-        
 
 - 1993-02-01:
     name: My first glass of wine
     desc: |
-        Left accidentally by my parents on the table.
+      Left accidentally by my parents on the table.
 
-        They found me climbing on furniture, huddled just under the ceiling.
+      They found me climbing on furniture, huddled just under the ceiling.
 
 - 1993-04-11:
     name: I see death for the first time
@@ -58,11 +55,11 @@
 - 1994-04-01:
     name: My great grandma dies
     desc: |
-        She survived the Austro-Hungarian Empire, two World Wars and the Soviet Union.
-        
-        She was picking plums in our orchard till her 90s. 
+      She survived the Austro-Hungarian Empire, two World Wars and the Soviet Union.
 
-        Then one day she fell asleep.
+      She was picking plums in our orchard till her 90s. 
+
+      Then one day she fell asleep.
 
 - 1994-09-01:
     name: 'First day of school'
@@ -70,7 +67,7 @@
 - 1995-09-01:
     name: My first friend
     desc: |
-         His first name is Jakub and his surname in English means "Little Darkness".
+      His first name is Jakub and his surname in English means "Little Darkness".
 
 - 1994-09-08:
     name: I kick a rock on the way home
@@ -88,16 +85,16 @@
 - 1997-10-01:
     name: 'My first poem (poorly received)'
     desc: |
-        It's a love poem, but it also contains references to Microsoft Windows 95. 
-        
-        I found the metaphor of window managers powerful.
+      It's a love poem, but it also contains references to Microsoft Windows 95. 
+
+      I found the metaphor of window managers powerful.
 
 - 1997-12-24:
     name: 'My first computer'
     desc: |
-        Optimus, with P60, 8MB of RAM, windows 3.11. 
-        I don't know why, but I still remember the serial number of the hard drive: Seagate ST3491A, 427.4 MB
-        
+      Optimus, with P60, 8MB of RAM, windows 3.11. 
+      I don't know why, but I still remember the serial number of the hard drive: Seagate ST3491A, 427.4 MB
+
 - 1998-08-11:
     name: I cook for the first time!
     desc: Chicken thighs, grossly undercooked.
@@ -108,16 +105,16 @@
 - 1998-09-07:
     name: 'My first computer program'
     desc: |
-        It was a catalog of football players, listing their names, positions, clubs and talents. Written in [qbasic](https://archive.org/details/msdos_qbasic_megapack).
+      It was a catalog of football players, listing their names, positions, clubs and talents. Written in [qbasic](https://archive.org/details/msdos_qbasic_megapack).
 
-        I made a joke that Ronaldo's main talent was bladder control. Nothing against Ronaldo, but the program would've broken if I left the variable empty so I had to put something there.
+      I made a joke that Ronaldo's main talent was bladder control. Nothing against Ronaldo, but the program would've broken if I left the variable empty so I had to put something there.
 
 - 1998-10-01:
     name: I play Diablo for the first time
     desc: |
-        ![Two boys playing Diablo](/diablo.jpg)
+      ![Two boys playing Diablo](/diablo.jpg)
 
-        We drove 60km to the city to buy it in a shady bazaar.
+      We drove 60km to the city to buy it in a shady bazaar.
 
 - 1999-08-11:
     name: I see a website for the first time!
@@ -130,18 +127,18 @@
 - 2001-03-15:
     name: '**Lateralus** comes out'
     desc: |
-        From now on, every summer I'll spend half of my time in Saturn (an Austrian computer store) listening to music and trying to hack their internet kiosks.
-        
-        Listen [here](https://www.youtube.com/watch?v=Y7JG63IuaWs).
+      From now on, every summer I'll spend half of my time in Saturn (an Austrian computer store) listening to music and trying to hack their internet kiosks.
+
+      Listen [here](https://www.youtube.com/watch?v=Y7JG63IuaWs).
 
 - 2002-02-16:
     name: My grandma dies
     desc: |
-        She was in her 60s.
-        
-        She never had any grey hair or wrinkles. The only time I saw her not smiling was during the weeks before she passed away.
+      She was in her 60s.
 
-        (I was wondering why people say that smiling gives you wrinkles.)
+      She never had any grey hair or wrinkles. The only time I saw her not smiling was during the weeks before she passed away.
+
+      (I was wondering why people say that smiling gives you wrinkles.)
 
 - 2002-11-07:
     name: 'My teachers accuse me of running a cult'
@@ -155,10 +152,10 @@
 
 - 2003-07-05:
     name: First cigarette
-    desc: | 
-        Overall rating: ★☆☆☆☆
+    desc: |
+      Overall rating: ★☆☆☆☆
 
-        Would not recommend. It's a bit like an instagram account. Feels good for the first 5 minutes. Some people find it really hard to quit.
+      Would not recommend. It's a bit like an instagram account. Feels good for the first 5 minutes. Some people find it really hard to quit.
 
 - 2004-09-01:
     name: 'Leaving home, moving to Krakow'
@@ -166,16 +163,16 @@
 - 2004-11-01:
     name: My first RPG game
     desc: |
-        It was Cyberpunk 2020. I introduced vampires to the game.
+      It was Cyberpunk 2020. I introduced vampires to the game.
 
-        The more experienced nerds in my group told me about Vampire: the Masquerade, which was the world I kept coming back to for the next 5 years.
+      The more experienced nerds in my group told me about Vampire: the Masquerade, which was the world I kept coming back to for the next 5 years.
 
 - 2005-07-13:
     name: I join a Christian pilgrimage, it is strange
     desc: |
-        Rating: ★★☆☆☆
+      Rating: ★★☆☆☆
 
-        Nice people, terrible music, dubious game mechanics.
+      Nice people, terrible music, dubious game mechanics.
 
 - 2006-01-12:
     name: Totentanz
@@ -188,7 +185,7 @@
 - 2007-02-01:
     name: Started Fotoszopa.pl
     desc: |
-        My first (legally recognized) company
+      My first (legally recognized) company
 
 - 2007-10-01:
     name: Started studying Linguistics and Psychology
@@ -226,10 +223,10 @@
 - 2013-04-17:
     name: Met Peter
     desc: |
-        during my first visit to London. 
-        I didn't know it at the time, but he would become one of my best friends.
+      during my first visit to London. 
+      I didn't know it at the time, but he would become one of my best friends.
 
-        Also, much, much later I realised that he was one of the people who taught me Flash a few years back via his [blog](https://web.archive.org/web/20071018024916/http://www.peterjoel.com/blog/)!
+      Also, much, much later I realised that he was one of the people who taught me Flash a few years back via his [blog](https://web.archive.org/web/20071018024916/http://www.peterjoel.com/blog/)!
 
 - 2013-05-10:
     name: Moved to London
@@ -268,10 +265,10 @@
 
 - 2016-07-10:
     name: Werework
-    desc: | 
-        I was a host and co-founder of Werework—a creative tech speakeasy based in London.
-        
-        We'd meet (almost!) every full moon to drink, eat, talk, and play with digital experiments.
+    desc: |
+      I was a host and co-founder of Werework—a creative tech speakeasy based in London.
+
+      We'd meet (almost!) every full moon to drink, eat, talk, and play with digital experiments.
 
 - 2017-02-17:
     name: First failed business
@@ -301,9 +298,9 @@
 - 2020-08-17:
     name: First Come and Say Hi call
     desc: |
-        By pure chance the first person to call me is one of my idols and someone whose work I followed more than a decade earlier.
-        
-        He can't afford to have a home, or even a bed to sleep in every night, and at the same time he works on making the web a place where people can be closer to each other. 
+      By pure chance the first person to call me is one of my idols and someone whose work I followed more than a decade earlier.
+
+      He can't afford to have a home, or even a bed to sleep in every night, and at the same time he works on making the web a place where people can be closer to each other.
 
 - 2020-09-11:
     name: Making fig jam, therapy
@@ -311,19 +308,22 @@
 - 2021-11-02:
     name: Potato.horse
     desc: |
-        It's [here](https://potato.horse)
-        Every time I attended a useless management meeting, a part of me would die. So I would take it out and put it in a tiny JPG file.
+      It's [here](https://potato.horse)
+      Every time I attended a useless management meeting, a part of me would die. So I would take it out and put it in a tiny JPG file.
 
 - 2021-11-11:
     name: Wavepaths
 
 - 2022-10-16:
     name: Mango!
-    desc: | 
-        Half Portuguese-Podengo, half New-Romantic edgelord. Picked up from a shelter in Porto.
+    desc: |
+      Half Portuguese-Podengo, half New-Romantic edgelord. Picked up from a shelter in Porto.
 
 - 2022-10-24:
     name: Learning, making toys
+
+- 2024-05-19:
+    name: Bye bye cigarettes
 
 - 2030-10-24:
     name: 🐉 hic sunt dracones 🌊
@@ -332,13 +332,12 @@
     name: Life is Elsewhen
     desc: But will continue below
 
-
 - 2056-04-05:
     name: 'I die (according to a prophecy)'
     desc: |
-        The prophet was my ex-partner. I'll err on the side of caution.
+      The prophet was my ex-partner. I'll err on the side of caution.
 
-        I hope it happens in the morning.
+      I hope it happens in the morning.
 
 - 2056-04-08:
     name: "I'm buried"
@@ -356,7 +355,7 @@
     name: '2 tourists pass by and pick the mushroom'
 
 - 2056-10-17:
-    name: "They make scrambled eggs with it"
+    name: 'They make scrambled eggs with it'
     desc: It's quite delicious. Use plenty of butter and don't worry too much about overcooking them (they're quite moist).
 
 - 2056-10-19:
