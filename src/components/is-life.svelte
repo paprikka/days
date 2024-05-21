@@ -3,10 +3,8 @@
 
 	export let day: RenderableGap;
 
-	$: text = Array(day.duration).fill('·').join('');
+	$: text = Array(day.duration).fill('·').join('​');
 	$: isFuture = new Date(day.start).getTime() > new Date().getTime();
-
-	// $: isToday
 </script>
 
 <span class:is-future={isFuture}>{text}</span>
@@ -18,6 +16,8 @@
 		font-family: monospace;
 		letter-spacing: 0.5ch;
 		user-select: none;
+		-webkit-user-select: none;
+		cursor: default;
 		word-break: break-all;
 		padding-inline-start: 0.5ch;
 	}
