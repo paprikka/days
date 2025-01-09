@@ -43,37 +43,34 @@
 	}
 
 	.today::after {
+		content: '♥';
 		position: absolute;
 		left: 50%;
 		top: 50%;
 		translate: -50% -50%;
 		display: block;
-		content: '';
-		width: 0.3ch;
-		height: 0.3ch;
-		border-radius: 100rem;
-		background-color: var(--color-link);
+		font-size: 4em;
 		animation: animateHeart 1s infinite;
 	}
 
 	@keyframes animateHeart {
 		0% {
-			scale: calc(3 * 0.8);
+			scale: calc(3 * 0.8 / 9);
 		}
 		5% {
-			scale: calc(3 * 0.9);
+			scale: calc(3 * 0.9 / 9);
 		}
 		10% {
-			scale: calc(3 * 0.8);
+			scale: calc(3 * 0.8 / 9);
 		}
 		15% {
-			scale: calc(3 * 1);
+			scale: calc(3 * 1 / 9);
 		}
 		50% {
-			scale: calc(3 * 0.8);
+			scale: calc(3 * 0.8 / 9);
 		}
 		100% {
-			scale: calc(3 * 0.8);
+			scale: calc(3 * 0.8 / 9);
 		}
 	}
 </style>
